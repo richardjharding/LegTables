@@ -1,0 +1,8 @@
+source https://www.nuget.org/api/v2
+
+clitool dotnet-fake
+nuget FSharp.Data 3.0.0-beta4 
+nuget System.Configuration.ConfigurationManager
+nuget System.Xml.Linq
+nuget Argu 5.1.0
+nuget Humanizer.Core

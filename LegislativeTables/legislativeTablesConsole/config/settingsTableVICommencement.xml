@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <section name="ChronConfig" type="LegislationChronologicalTableLib.ChronConfig, LegislationChronologicalTableLib"/>
+        <section name="ReplaceConfig" type="LegislationChronologicalTableLib.ReplaceConfig, LegislationChronologicalTableLib"/>
+    </configSections>
+    <appSettings>
+        <add key="XSLTKeyToUse" value="BoundVolumeXSLT"/>
+        <add key="DocumentType" value="TableVICommencement" />
+        <!--<add key="ChronAdditionalXSLT" value="C:\LegislativeTables\TableVI Commencement\XSL\ChronAdditional.xsl"/>-->
+        <add key="BoundVolumeXSLT" value="C:\LegislativeTables\TableVI Commencement\boundVolumesToes.xsl"/>
+        <!--<add key="SIBoundVolumeXSLT" value="C:\LegislativeTables\TableVI Commencement\XSL\SIBoundVolumes.xsl"/>-->
+        <!--<add key="ScotSIBoundVolumeXSLT" value="C:\LegislativeTables\TableVI Commencement\XSL\ScotSIBoundVolumes.xsl"/>-->
+        <!--<add key="ProxyServer" value="http://proxystc:8080"/>-->
+        <add key="LegislationBaseURL" value="http://www.legislation.gov.uk/changes/affected/"/>
+        <add key="LegislationQueryString" value="data.feed?sort=affected-year-number&amp;results-count=1000&amp;page="/>
+        <add key="TimeOut" value="500"/>
+        <add key="TempFolder" value="C:\LegislativeTables\TableVI Commencement\Output\TempFiles"/>
+    </appSettings>
+  <ReplaceConfig>
+    <ReplaceText>
+      <add MatchText="heading word substituted" ReplaceText="am (heading am)"/>
+      <add MatchText="heading word inserted" ReplaceText="am (heading am)"/>
+      <add MatchText="words substituted" ReplaceText="am"/>
+      <add MatchText="word substituted" ReplaceText="am "/>
+      <add MatchText="words omitted" ReplaceText="rep in pt"/>
+      <add MatchText="and word rep" ReplaceText="rep in pt"/>
+      <add MatchText="and word inserted" ReplaceText="am"/>
+      <add MatchText="words inserted" ReplaceText="am"/>
+      <add MatchText="title substituted" ReplaceText="am (title am)"/>
+      <add MatchText="subst for words" ReplaceText="am"/>
+      <add MatchText=") inserted" ReplaceText=") am"/>
+      <add MatchText=") rep" ReplaceText=") rep in pt"/>
+      <add MatchText=") omitted" ReplaceText=") rep in pt"/>
+      <add MatchText=") substituted" ReplaceText=") am"/>
+      <add MatchText=") added" ReplaceText=") am"/>
+      <add MatchText="(with modifications)" ReplaceText="(mods)"/>
+      <add MatchText="Act coming into force" ReplaceText="appt day"/>
+      <add MatchText="Coming into force" ReplaceText="appt day(s) for spec provns"/>
+      <add MatchText="coming into force" ReplaceText="appt day(s) for spec provns"/>
+      <add MatchText="incorporated" ReplaceText="incorp"/>
+      <add MatchText="((" ReplaceText="("/>
+      <add MatchText="))" ReplaceText=")"/>
+      <add MatchText="(temp.)" ReplaceText="(temp)"/>
+      <add MatchText=") excluded" ReplaceText=") excl in pt"/>
+      <add MatchText="entry omitted" ReplaceText="rep in pt"/>
+      <add MatchText="s." ReplaceText="s"/>
+      <add MatchText="Sch." ReplaceText="Sch"/>
+      <add MatchText="S." ReplaceText="S"/>
+      <add MatchText="sch." ReplaceText="sch"/>
+      <add MatchText="art." ReplaceText="art"/>
+      <add MatchText="reg." ReplaceText="reg"/>
+      <add MatchText="para." ReplaceText="para"/>
+      <add MatchText="Pt." ReplaceText="Pt"/>
+      <add MatchText="(Scotland), 2016" ReplaceText="(S), 2016"/>
+      <add MatchText="(Wales), 2016" ReplaceText="(W), 2016"/>  
+    </ReplaceText>
+  </ReplaceConfig>
+    <ChronConfig>
+         <GenerateChrons>
+          <!--  6 columns for ChronAdditionalXSLT Start-->
+        <!-- <add name="ukpga_2012"
+                 AffectedDocumentType="ukpga"
+                 AffectedStartYear="1000"
+                 AffectedEndYear="2016"
+                 AffectingYear="2012"
+                  TableHeader="&lt;th class=~year~&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Short title&lt;/th&gt;&lt;th&gt;How Affected&lt;/th&gt;&lt;th class=~resultsAffectingTitle~&gt;2012 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                 OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_ukpga_to_2012.doc"/> -->
+          
+          
+        <add name="ukpga_1"
+                 AffectedDocumentType="ukpga"  
+                 AffectedStartYear="1000" 
+                 AffectedEndYear="1968" 
+                 AffectingYear="2014" 
+                 TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Short title&lt;/th&gt;&lt;th&gt;How Affected&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;" 
+                 OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_ukpga_to_1968.doc"/>
+             <add name="ukpga_2"
+                AffectedDocumentType="ukpga"
+                AffectedStartYear="1969"
+                AffectedEndYear="1992"
+                AffectingYear="2014" 
+                TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Short title&lt;/th&gt;&lt;th&gt;How Affected&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_ukpga_1969_1992.doc"/> 
+          <add name="ukpga_3"
+                 AffectedDocumentType="ukpga"
+                 AffectedStartYear="1993"
+                 AffectedEndYear="2000"
+                 AffectingYear="2014" 
+                 TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Short title&lt;/th&gt;&lt;th&gt;How Affected&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                 OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_ukpga_1993_2000.doc"/> 
+          <add name="ukpga_4"
+                 AffectedDocumentType="ukpga"
+                 AffectedStartYear="2001"
+                 AffectedEndYear="2010"
+                 AffectingYear="2014"
+                 TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Short title&lt;/th&gt;&lt;th&gt;How Affected&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                 OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_ukpga_2001_2010.doc"/>
+        <add name="ukpga_5"
+                 AffectedDocumentType="ukpga"
+                 AffectedStartYear="2011"
+                 AffectedEndYear="-1"
+                 AffectingYear="2014"
+                 TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Short title&lt;/th&gt;&lt;th&gt;How Affected&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                 OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_ukpga_2011_currentdate.doc"/>
+            
+           <add name="aep"
+                AffectedDocumentType="aep"
+                AffectedStartYear="-1"
+                AffectedEndYear="-1"
+                AffectingYear="2014" 
+                TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (how affected)&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_aep.doc"/>
+            
+           <add name="apgb"
+                AffectedDocumentType="apgb"
+                AffectedStartYear="-1"
+                AffectedEndYear="-1"
+                AffectingYear="2014" 
+                TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (how affected)&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_apgb.doc"/>   
+				
+            <!-- <add name="aosp"
+                AffectedDocumentType="aosp"
+                AffectedStartYear="-1"
+                AffectedEndYear="-1"
+                AffectingYear="2014" 
+                TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (how affected)&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_aosp.doc"/>  -->
+            
+           <!-- <add name="asp"
+                AffectedDocumentType="asp"
+                AffectedStartYear="-1"
+                AffectedEndYear="-1"
+                AffectingYear="2014" 
+                TableHeader="&lt;th&gt;Act of the Scottish Parliament affected (year and number)&lt;/th&gt;&lt;th&gt;Act of the Scottish Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the Scottish Parliament affected(how affected)&lt;/th&gt;&lt;th&gt;2016 affecting provision in asp, SSI, UK Act or UK SI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_asp.doc"/> -->
+            
+           <!-- <add name="mwa"
+               AffectedDocumentType="mwa"
+               AffectedStartYear="-1"
+               AffectedEndYear="-1"
+               AffectingYear="2014" 
+               TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (how affected)&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+               OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_mwa.doc"/>  -->
+            
+             <add name="ukcm"
+              AffectedDocumentType="ukcm"
+              AffectedStartYear="-1"
+              AffectedEndYear="-1"
+              AffectingYear="2014" 
+              TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (how affected)&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+              OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_ukcm.doc"/>  
+            
+            <!-- <add name="anaw"
+              AffectedDocumentType="anaw"
+              AffectedStartYear="-1"
+              AffectedEndYear="-1"
+              AffectingYear="2014" 
+              TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (how affected)&lt;/th&gt;&lt;th&gt;2016 for Acts of the National Assembly for Wales&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+              OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_anaw.doc"/>   -->
+
+              <add name="ukla"
+                AffectedDocumentType="ukla"
+                AffectedStartYear="-1"
+                AffectedEndYear="-1"
+                AffectingYear="2014" 
+                TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (how affected)&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_ukla.doc"/>
+
+            <!-- <add name="wsi"
+                AffectedDocumentType="wsi"
+                AffectedStartYear="-1"
+                AffectedEndYear="-1"
+                AffectingYear="2014" 
+                TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (how affected)&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_wsi.doc"/> -->
+
+            <!-- <add name="ssi"
+                AffectedDocumentType="ssi"
+                AffectedStartYear="-1"
+                AffectedEndYear="-1"
+                AffectingYear="2014" 
+                TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (how affected)&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_ssi.doc"/> -->
+
+             <!-- <add name="uksi"
+                AffectedDocumentType="uksi"
+                AffectedStartYear="-1"
+                AffectedEndYear="-1"
+                AffectingYear="2014" 
+                TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (how affected)&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_uksi.doc"/>
+
+            <add name="uksi_1"
+                 AffectedDocumentType="uksi"  
+                 AffectedStartYear="1000" 
+                 AffectedEndYear="1968" 
+                 AffectingYear="2014" 
+                 TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Short title&lt;/th&gt;&lt;th&gt;How Affected&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;" 
+                 OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_uksi_to_1968.doc"/>
+            <add name="uksi_2"
+                AffectedDocumentType="uksi"
+                AffectedStartYear="1969"
+                AffectedEndYear="1992"
+                AffectingYear="2014" 
+                TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Short title&lt;/th&gt;&lt;th&gt;How Affected&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_uksi_1969_1992.doc"/> 
+            <add name="uksi_3"
+                 AffectedDocumentType="uksi"
+                 AffectedStartYear="1993"
+                 AffectedEndYear="2000"
+                 AffectingYear="2014" 
+                 TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Short title&lt;/th&gt;&lt;th&gt;How Affected&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                 OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_uksi_1993_2000.doc"/> 
+            <add name="uksi_4"
+                 AffectedDocumentType="uksi"
+                 AffectedStartYear="2001"
+                 AffectedEndYear="2010"
+                 AffectingYear="2014" 
+                 TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Short title&lt;/th&gt;&lt;th&gt;How Affected&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                 OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_uksi_2001_2010.doc"/>
+            <add name="uksi_5"
+                 AffectedDocumentType="uksi"
+                 AffectedStartYear="2011"
+                 AffectedEndYear="2018"
+                 AffectingYear="2014" 
+                 TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Short title&lt;/th&gt;&lt;th&gt;How Affected&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                 OutputFileName="C:\LegislativeTables\TableVI Commencement\Output\Section_uksi_2011_currentdate.doc"/> -->
+
+          <!--  6 columns for ChronAdditionalXSLT End-->
+          
+        </GenerateChrons>
+    </ChronConfig>
+</configuration>

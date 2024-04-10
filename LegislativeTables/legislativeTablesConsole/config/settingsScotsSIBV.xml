@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <section name="ChronConfig" type="LegislationChronologicalTableLib.ChronConfig, LegislationChronologicalTableLib"/>
+        <section name="ReplaceConfig" type="LegislationChronologicalTableLib.ReplaceConfig, LegislationChronologicalTableLib"/>
+    </configSections>
+    <appSettings>
+        <add key="XSLTKeyToUse" value="BoundVolumeXSLT"/>
+        <add key="DocumentType" value="ScotsSIBoundVolumes" />
+        <!--<add key="ChronAdditionalXSLT" value="C:\LegislativeTables\TableVI\XSL\ChronAdditional.xsl"/>-->
+        <add key="BoundVolumeXSLT" value="C:\LegislativeTables\TableVI\boundVolumesToes.xsl"/>
+        <!--<add key="SIBoundVolumeXSLT" value="C:\LegislativeTables\TableVI\XSL\SIBoundVolumes.xsl"/>-->
+        <!--<add key="ScotSIBoundVolumeXSLT" value="C:\LegislativeTables\TableVI\XSL\ScotSIBoundVolumes.xsl"/>-->
+        <!--<add key="ProxyServer" value="http://proxystc:8080"/>-->
+        <add key="LegislationBaseURL" value="http://www.legislation.gov.uk/changes/affected/"/>
+        <add key="LegislationQueryString" value="data.feed?sort=affected-year-number&amp;results-count=1000&amp;page="/>
+        <add key="TimeOut" value="500"/>
+        <add key="TempFolder" value="C:\LegislativeTables\ScotsSI_BV\Output\TempFiles"/>
+    </appSettings>
+  <ReplaceConfig>
+    <ReplaceText>
+      <add MatchText="heading word substituted" ReplaceText="am (heading am)"/>
+      <add MatchText="heading word inserted" ReplaceText="am (heading am)"/>
+      <add MatchText="words substituted" ReplaceText="am"/>
+      <add MatchText="word substituted" ReplaceText="am "/>
+      <add MatchText="words omitted" ReplaceText="rep in pt"/>
+      <add MatchText="and word rep" ReplaceText="rep in pt"/>
+      <add MatchText="and word inserted" ReplaceText="am"/>
+      <add MatchText="words inserted" ReplaceText="am"/>
+      <add MatchText="title substituted" ReplaceText="am (title am)"/>
+      <add MatchText="subst for words" ReplaceText="am"/>
+      <add MatchText=") inserted" ReplaceText=") am"/>
+      <add MatchText=") rep" ReplaceText=") rep in pt"/>
+      <add MatchText=") omitted" ReplaceText=") rep in pt"/>
+      <add MatchText=") substituted" ReplaceText=") am"/>
+      <add MatchText=") added" ReplaceText=") am"/>
+      <add MatchText="(with modifications)" ReplaceText="(mods)"/>
+      <add MatchText="Act coming into force" ReplaceText="appt day"/>
+      <add MatchText="Coming into force" ReplaceText="appt day(s) for spec provns"/>
+      <add MatchText="coming into force" ReplaceText="appt day(s) for spec provns"/>
+      <add MatchText="incorporated" ReplaceText="incorp"/>
+      <add MatchText="((" ReplaceText="("/>
+      <add MatchText="))" ReplaceText=")"/>
+      <add MatchText="(temp.)" ReplaceText="(temp)"/>
+      <add MatchText=") excluded" ReplaceText=") excl in pt"/>
+      <add MatchText="entry omitted" ReplaceText="rep in pt"/>
+      <add MatchText="s." ReplaceText="s"/>
+      <add MatchText="Sch." ReplaceText="Sch"/>
+      <add MatchText="S." ReplaceText="S"/>
+      <add MatchText="sch." ReplaceText="sch"/>
+      <add MatchText="art." ReplaceText="art"/>
+      <add MatchText="reg." ReplaceText="reg"/>
+      <add MatchText="para." ReplaceText="para"/>
+      <add MatchText="Pt." ReplaceText="Pt"/>
+      <add MatchText="(Scotland), 2016" ReplaceText="(S), 2016"/>
+      <add MatchText="(Wales), 2016" ReplaceText="(W), 2016"/>  
+    </ReplaceText>
+  </ReplaceConfig>
+    <ChronConfig>
+         <GenerateChrons>
+          <!--  6 columns for ChronAdditionalXSLT Start-->
+       
+                     
+				
+            <add name="ssi"
+                AffectedDocumentType="ssi"
+                AffectedStartYear="-1"
+                AffectedEndYear="-1"
+                AffectingYear="2014" 
+                TableHeader="&lt;th&gt;Year and Chapter of Act or No of Measure&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (short title)&lt;/th&gt;&lt;th&gt;Act of the UK Parliament affected (how affected)&lt;/th&gt;&lt;th&gt;2016 Chapter of Act or No of Measure or SI or No of asp or SSI&lt;/th&gt;&lt;th class=~EffectId~&gt;Effect Id&lt;/th&gt;"
+                OutputFileName="C:\LegislativeTables\ScotsSI_BV\Output\Section_ssi.doc"/> 
+            
+           
+          
+
+          <!--  6 columns for ChronAdditionalXSLT End-->
+          
+        </GenerateChrons>
+    </ChronConfig>
+</configuration>

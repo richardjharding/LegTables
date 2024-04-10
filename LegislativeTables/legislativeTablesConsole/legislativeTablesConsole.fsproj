@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+<Import Project="fsc.props" />
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RuntimeIdentifiers>win-x86</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="types.fs" />
+    <Compile Include="filters.fs" />
+    <Compile Include="argumentParser.fs" />
+    <Compile Include="FsHtml.fs" />
+    <Compile Include="outputTypes.fs"/>
+    <Compile Include="feed.fs"/>
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+   <ItemGroup>
+      <None Include="./config/settings*.xml" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
